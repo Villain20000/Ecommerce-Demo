@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Box Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Ecommerce Website With Stripe</title>
+  </head>
+  <body>
+    <header>
+      <!-- Nav Bar -->
+      <div class="nav container">
+        <a href="#" class="logo">Ecommerce</a>
+        <i class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></i>
+        <!-- Cart -->
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <div class="cart-content"></div>
+          <!-- Make sure this is empty for dynamic content -->
+          <div class="total">
+            <span class="total-title">Total:</span>
+            <span class="total-price">$0</span>
+          </div>
+          <button type="button" class="btn-buy">Buy Now</button>
+          <i class="bx bx-x" id="close-cart"></i>
+        </div>
+      </div>
+    </header>
+    <!-- Products -->
+    <section class="shop container">
+      <h2 class="section-title">Shop Products</h2>
+      <div class="shop-content" id="productContainer"></div>
+      <!-- Empty container for dynamic products -->
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

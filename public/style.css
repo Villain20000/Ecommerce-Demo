@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: $main-color;
+  --text-color: $text-color;
+  --bg-color: $bg-color;
+  --container-color: $container-color;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  color: #fff;
+  background: #1e1e2a;
+}
+
+.container {
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background: #1e1e2a;
+  box-shadow: 0 1px 4px hsla(0, 0%, 98%, 0.001);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+#cart-icon {
+  position: relative;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+#cart-icon[data-quantity]::after {
+  content: attr(data-quantity);
+  position: absolute;
+  top: 0px;
+  right: -12px;
+  width: 20px;
+  height: 20px;
+  background: #02ac70;
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Cart*/
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 360px;
+  min-height: 100vh;
+  padding: 20px;
+  background: #1e1e2a;
+  box-shadow: -2px 0 4px hsla(0, 4%, 15%, 0.1);
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.cart-active {
+  right: 0;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid #02ac70;
+}
+
+.total-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.btn-buy {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 2rem;
+  background: #02ac70;
+  color: #fff;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-buy:hover {
+  background: #f64646;
+}
+
+#close-cart {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 2rem;
+  color: #02ac70;
+  cursor: pointer;
+}
+
+.total {
+  display: flex; /* Uses flexbox to align children inline */
+  align-items: center; /* Vertically centers the flex items */
+  justify-content: space-between; /* Puts space between the two spans */
+  padding: 10px 0; /* Adds some padding above and below for spacing */
+}
+
+.shop-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* flex-direction: row; */
+  grid-gap: 15px;
+}
+
+img.cart-img {
+  height: 120px;
+  width: 160px;
+}
+
+img.product-img {
+  height: 323px;
+}
+
+.cart-item {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.cart-active {
+  right: 0;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+input.cart-quantity-input {
+  background: rgba(255, 255, 255, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #000;
+  padding: 2px;
+  text-indent: 5px;
+}
+
+button.btn.btn-danger {
+  background-color: #02ac70;
+  border: 0px solid;
+  border-radius: 15px;
+  padding: 10px;
+  color: #fff;
+  margin-top: 15px;
+}
+
+button.btn.btn-danger:hover {
+  transition: background-color 3s ease;
+  background-color: #f64646;
+}
+
+i.bx.bx-shopping-bag.add-cart:hover {
+  color: #02ac70;
+}
+
+@media (max-width: 1200px) {
+  .shop-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .shop-content {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #cart-icon {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .btn-buy {
+    width: 100%;
+  }
+  .total {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .total-title,
+  .total-price {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
