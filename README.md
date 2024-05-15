@@ -1,5 +1,5 @@
-Ecommerce-Demo 🛒
-Welcome to the Ecommerce-Demo repository! This project showcases an ecommerce platform built with HTML, Sass, JavaScript, Node.js, and PostgreSQL.
+Ecommerce-Demo 🛒<br>
+Welcome to the Ecommerce-Demo repository! This project showcases an ecommerce platform built with HTML, Sass, JavaScript, Node.js, and PostgreSQL.<br>
 
 Features ✨
 Responsive Design 📱: Built with Sass for a responsive and modern UI.
