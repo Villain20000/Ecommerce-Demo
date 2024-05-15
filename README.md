@@ -37,7 +37,7 @@ Welcome to the Ecommerce-Demo repository! This project showcases an ecommerce pl
 
 Start the server:  
 ```bash
-node app.js
+npm start
 ```
 
 ## Contributing 🤝
